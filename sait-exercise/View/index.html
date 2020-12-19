@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<!-- Author: Heinz Geipel
+	Date: 5/31/2020
+	Course: CPRG-210-OOS
+	Exercises for days 1-7 -->
+
+<html>
+	<head>
+		<title>Welcome</title>
+		<script src="/myscripts.js"></script>
+		<script> 
+<!-- picture, description and corresponding hyperlink array for the right hand side of the body -->
+			var pics = ["/CADSAB.jpg", "/ACC-Logo.png"];
+			var descs = new Array("CADS", "Alpine Club");		
+			var myURLs = ["https://cadsalberta.ca/","https://www.alpineclubofcanada.ca/web/"];
+		</script>
+		<link href="/mystyles.css" rel="stylesheet" />		
+	</head>
+	<body>
+		<header>
+			<img src="/header.png" />
+			<h1> Welcome to the Ski Experts</h1>
+		</header>
+		<section>
+			<img src="/bodyLeft1.png" width="300" height="200" />
+			<img src="/bodyLeft2.png" width="300" height="200" />
+		</section>
+		<aside>
+			Enjoy the mountain with friends! <br />
+<!-- build list of descriptions with event handler to swap pictures for description --> 
+			<script>			
+				document.write("<table border='1'>");
+<!-- index allows identification of each cell used in event handler
+				for (i=0; i<descs.length; i++)
+				{
+<!-- builds HTML stream for one cell including description with corresponding event handler arguments -->				
+					document.write(`<tr><td><div id="${ i }" onmouseover="descMouseover(${ i })" > <h1>${ descs[i] }</h1> </div></td></tr>`);				
+				}
+				document.write("</table>");			
+			</script>
+		</aside>
+		<footer>
+			<a href="/contact.html"> Contact  </a> 
+			<a href="/register.html"> Register </a>
+		</footer>
+	</body>
+</html>

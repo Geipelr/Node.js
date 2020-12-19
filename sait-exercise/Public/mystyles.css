@@ -1,0 +1,95 @@
+/* this is the style settings for all pages in my site */
+
+// Author: Heinz Geipel
+// Date: 5/31/2020
+// Course: CPRG-210-OOS
+// Exercises for days 1-7
+
+/* style for error messages after form validation */
+	#myMessage{
+			font-size: 200%;
+			color: red;
+			text-align: left;
+	}
+
+/* default setting, may be overwritten later */
+	body, html, div, blockquote, img, label, p, h1, h2, h3, h4, h5, h6, pre, ul, ol,
+	li, dl, dt, dd, form, a, fieldset, input, th, td
+	{
+		margin: 0; padding: 0; border: 0; outline: none;
+	}
+
+/* style and formatting for input fields */
+	input[type=text], input[type=number], input[type=email]{	
+		background-color: aqua;
+		text-align: left;
+		}	
+
+/* default visibility of input aid */
+	.visdef {
+		display: none;
+	}
+	
+/* style and formatting of input aid */
+	#desc {
+		position: absolute;
+		top: auto;
+		text-align: left;
+		width: 300px;
+		color: green;
+	}
+
+/* form submit button */
+	input[type=submit]{	
+		border: 2px solid black;
+		}	
+
+	
+/* page style */	
+	body{
+			line-height: 1;
+			font-size: 100%;
+			font-style: italic;
+			background-color : #ddee88;
+			color: black;
+			background-image: url("background.png");
+			background-repeat: repeat	;
+		}
+
+/* page layout */
+	header{
+			margin: 1.5%;
+			text-align: center;
+		  }
+	
+	section{
+			float: left;
+			margin: 1.5%;
+			width: 60%;					
+			height: 50%;
+			text-align: left;
+		   }
+	
+	aside{			
+			float: left;
+			margin: 1.5%;
+			width: auto;
+			height: 50%;
+			font-size: 100%;
+			text-align: left;
+		 }		 
+	
+/* style and formatting for footer elements */
+	footer{					
+			position: absolute;
+			bottom: 1.5%;
+			left: 50%;
+			text-align: center;					
+		  }
+	
+	footer a{
+			display: inline-block;
+			width: 100px;			
+			}				   
+
+

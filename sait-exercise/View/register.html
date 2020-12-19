@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<!-- Author: Heinz Geipel
+// Date: 5/31/2020
+// Course: CPRG-210-OOS
+// Exercises for days 1-7 -->
+
+<html>
+	<head>
+		<title>Register</title>
+		<link href="/mystyles.css" rel="stylesheet" />
+		<script src="/myscripts.js"></script>
+	</head>
+	<body>
+		<form method="post" action="/create-agent">
+<!-- table includes three columns: the first shows the lable, the second the entry field -->
+		    <table>
+				<tr>
+					<th></th>
+					<th></th>
+					<th></th>
+				</tr>
+				<tr>
+<!-- first name -->				
+					<td><label for="fname">First Name: </label></td>
+					<td><input onfocus="showAid('firstName')" onblur="blurAid('firstName')" type="text" name="fname" /></td>
+<!-- puts all the input aids into third column spanning over multiple rows --> 
+					<td rowspan="8" id="desc">
+						<div>
+							<p class="visdef" id="firstName">Please enter first name.</p>
+							<p class="visdef" id="lastName">Please enter last name.</p>
+						</div>
+					</td>
+				</tr>
+				<tr>
+<!-- lasst name -->
+					<td><label for="lname">Last Name: </label></td>
+					<td><input onfocus="showAid('lastName')" onblur="blurAid('lastName')" type="text" name="lname" /></td>
+				</tr>
+				<tr>
+<!-- street name -->
+					<td><label for="street">Street Name: </label></td>
+					<td><input type="text" name="street" /></td>
+				</tr>
+<!-- street number -->
+				<tr>
+					<td><label for="snumber">Street Number: </label></td>
+					<td><input type="number" name="snumber" /></td>
+				</tr>
+<!-- city -->
+				<tr>
+					<td><label for="city">City: </label></td>
+					<td><input type="text" name="city" /></td>
+				</tr>
+<!-- postal code -->
+				<tr>
+					<td><label for="postal">Postal code: </label></td>
+					<td><input type="text" name="postal" /></td>
+				</tr>
+<!-- email -->
+				<tr>
+					<td><label for="email">Your email: </label></td>
+					<td><input type="email" name="email" /></td>
+				</tr>
+<!-- phone -->
+				<tr>
+					<td><label for="phone">Your phone: </label></td>
+					<td><input type="text" name="phone" /></td>
+				</tr>			
+<!-- info email -->
+				<tr>
+					<td><label for="sendat">Send me info email: </label></td>
+					<td><input type="checkbox" name="sendat" checked="checked" /></td>
+				</tr>
+			</table>
+<!-- free text input -->			
+			<textarea name="mytext" rows="5" cols = "30">Please enter your specific interests </textarea>
+<!-- submit button with validation -->
+			<input type="submit" value="Click to submit" onclick="return validate(this.form)" />
+		</form>
+<!-- area for error messages after validation -->
+		<p id="myMessage"></p>
+	</body>
+</html>

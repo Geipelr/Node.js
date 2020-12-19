@@ -1,0 +1,77 @@
+doctype html
+//
+  Author: Heinz Geipel
+  // Date: 5/31/2020
+  // Course: CPRG-210-OOS
+  // Exercises for days 1-7
+head
+  title Register
+  //
+    <link href="/mystyles.css" rel="stylesheet" />
+    <script src="/myscripts.js"></script>
+form(method='post' action='/create-post')
+  // table includes three columns: the first shows the lable, the second the entry field
+  table
+    tr
+      th
+      th
+      th
+    tr
+      // first name
+      td
+        label(for='fname') First Name: 
+      td
+        input(onfocus="showAid('firstName')" onblur="blurAid('firstName')" type='text' name='fname')
+      // puts all the input aids into third column spanning over multiple rows
+      td#desc(rowspan='8')
+        div
+          p#firstName.visdef Please enter first name.
+          p#lastName.visdef Please enter last name.
+    tr
+      // lasst name
+      td
+        label(for='lname') Last Name: 
+      td
+        input(onfocus="showAid('lastName')" onblur="blurAid('lastName')" type='text' name='lname')
+    tr
+      // street name
+      td
+        label(for='street') Street Name: 
+      td
+        input(type='text' name='street')
+    // street number
+    tr
+      td
+        label(for='snumber') Street Number: 
+      td
+        input(type='number' name='snumber')
+    // city
+    tr
+      td
+        label(for='city') City: 
+      td
+        input(type='text' name='city')
+    // postal code
+    tr
+      td
+        label(for='postal') Postal code: 
+      td
+        input(type='text' name='postal')
+    // email
+    tr
+      td
+        label(for='email') Your email: 
+      td
+        input(type='email' name='email')
+    // info email
+    tr
+      td
+        label(for='sendat') Send me info email: 
+      td
+        input(type='checkbox' name='sendat' checked='checked')
+  // free text input
+  textarea(name='mytext' rows='5' cols='30') Please enter your specific interests 
+  // submit button with validation
+  input(type='submit' value='Click to submit')
+// area for error messages after validation
+// <p id="myMessage"></p>
